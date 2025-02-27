@@ -3,16 +3,8 @@ import Image from "next/image";
 import React from "react";
 import BookCoverSvg from "./BookCoverSvg";
 
-type BookCoverVarient="extraSmall" | "small" | "medium" | 'regular' | "wide"
+type BookCoverVarient = "small" | "default" | "wide" ;
 
-const varientStyles:Record<BookCoverVarient,string>={
-    extraSmall:'book-cover_extra_small',
-    small:'book-cover_small',
-    medium:'book-cover_medium',
-    regular:'book-cover_regular',
-    wide:'book-cover_wide',
-
-}
 
 interface props {
   className?: string;
@@ -21,24 +13,38 @@ interface props {
   coverImage: string;
 }
 
-const BookCover = ({ variant="regular", className, coverColor="#012B48", coverImage, }: props) => {
-  return <div className={cn
-    ("relative transition-all duration-300 "
-        ,varientStyles[variant],className)}>
-            <BookCoverSvg coverColor={coverColor}/>
-
-                <div className="absolute z-10" style={{ left:'12%',width:'87.5%',height:'88%'}}>
-                    <Image
-                    src={coverImage}
-                    alt="bookcover"
-                    fill
-
-                    />
+const varientStyles: Record<BookCoverVarient, string> = {
+  
+  small: "book-cover_small",
+  default: "book-cover_medium",
+  wide: "book-cover_wide",
+};
 
 
-                </div>
+const BookCover = ({
+  variant = "default",
+  className,
+  coverColor = "#012B48",
+  coverImage,
+}: props) => {
+  return (
+    <div
+      className={cn(
+        "relative transition-all duration-300 ",
+        varientStyles[variant],
+        className
+      )}
+    >
+      <BookCoverSvg coverColor={coverColor} />
 
-        </div>
+      <div
+        className="absolute z-10"
+        style={{ left: "12%", width: "87.5%", height: "88%" }}
+      >
+        <Image src={coverImage} alt="bookcover" fill />
+      </div>
+    </div>
+  );
 };
 
 export default BookCover;

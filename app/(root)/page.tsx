@@ -1,6 +1,5 @@
 import BookList from "@/components/BookList";
 import BookOverview from "@/components/BookOverview";
-import { Button } from "@/components/ui/button";
 import { sampleBooks } from "@/constants";
 
 
@@ -12,7 +11,7 @@ const Home=()=> {
     <BookList
     title="Latest Books"
     books={sampleBooks}
-    conatainerClassName="mt-28"
+    containerClassName="mt-28"
     />
     
     </>

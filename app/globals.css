@@ -38,11 +38,11 @@
 
   /* Book Card */
   .book-title {
-    @apply mt-2 line-clamp-1 text-base font-semibold text-white xs:text-xl;
+    @apply mt-2 line-clamp-1 text-base font-semibold text-white xs:text-xl text-wrap;
   }
 
   .book-genre {
-    @apply mt-1 line-clamp-1 text-sm italic text-light-100 xs:text-base;
+    @apply mt-1 line-clamp-1 text-sm italic  text-light-100 xs:text-base text-wrap;
   }
 
   .book-loaned {
@@ -50,7 +50,7 @@
   }
 
   .book-btn {
-    @apply bg-dark-600 mt-3 min-h-14 w-full font-bebas-neue text-base text-primary;
+    @apply bg-dark-600 mt-3 min-h-14 w-full font-bebas-neue text-base text-black;
   }
 
   /* Borrowed Book */
@@ -85,7 +85,7 @@
 
   /* Book List */
   .book-list {
-    @apply mt-10 flex flex-wrap gap-5 max-xs:justify-between xs:gap-10;
+    @apply mt-10 flex flex-wrap gap-5 max-sm:justify-between xs:gap-10;
   }
 
   /* Book Overview */
