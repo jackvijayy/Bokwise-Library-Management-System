@@ -24,12 +24,12 @@ const layout = ({children}:{children:ReactNode}) => {
 
 
         </section>
-        <section className='auth-illustration'>
+        <section className='auth-illustration hidden lg:block'>
             <Image
             src="/images/auth-illustration.png"
             alt='illustration'
-            width={1000}
-            height={1000}
+            width={800}
+            height={800}
             />
 
 
