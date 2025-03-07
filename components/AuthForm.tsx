@@ -46,7 +46,9 @@ const AuthForm = <T extends FieldValues>({
   });
 
   ///handle Submit for the data
-  const handleSubmit: SubmitHandler<T> = async (data) => {};
+  const handleSubmit: SubmitHandler<T> = async (data) => {
+    console.log(data)
+  };
 
   return (
     <div className="flex flex-col gap-4">
